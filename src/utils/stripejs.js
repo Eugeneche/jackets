@@ -1,8 +1,8 @@
 import { loadStripe } from "@stripe/stripe-js"
 
-/* require("dotenv").config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-}) */
+})
 
 let stripePromise
 const getStripe = () => {

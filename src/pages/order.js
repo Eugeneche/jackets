@@ -32,7 +32,6 @@ const OrderPage = ({data}) => {
 
     //const price = new FormData(event.target).get("priceSelect")
     const price = currentProduct?.default_price
-    const price2 = 'price_1O6tQgFMr3lmpXgFOdZ3D3dc'
     const stripe = await getStripe()
     const { error } = await stripe.redirectToCheckout({
       mode: "payment",
