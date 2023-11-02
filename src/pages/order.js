@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-//import getStripe from "../utils/stripejs"
+import getStripe from "../utils/stripejs"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import useTranslations from "../components/useTranslations"
@@ -23,6 +23,29 @@ const OrderPage = ({data}) => {
       (product.metadata.size === size && product.metadata.color === color) && setCurrentProduct(product)
     })
   })
+  /* ------------------------ */
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async event => {
+    event.preventDefault()
+    setLoading(true)
+
+    //const price = new FormData(event.target).get("priceSelect")
+    const price = currentProduct?.default_price
+    const price2 = 'price_1O6tQgFMr3lmpXgFOdZ3D3dc'
+    const stripe = await getStripe()
+    const { error } = await stripe.redirectToCheckout({
+      mode: "payment",
+      lineItems: [{ price, quantity: 1 }],
+      successUrl: `${window.location.origin}/delivery`,
+      cancelUrl: `${window.location.origin}/contacts`,
+    })
+
+    if (error) {
+      console.warn("Error:", error)
+      setLoading(false)
+    }
+  }
 
   return (
     <>
@@ -65,6 +88,10 @@ const OrderPage = ({data}) => {
             <a href={currentProduct?.metadata?.plink} target="_blank" rel="noreferrer">
               <button>Continue</button>
             </a>
+
+
+            <button onClick={(event) => handleSubmit(event)}>Another way</button>
+
             
           </div>
         </div>
@@ -91,7 +118,10 @@ query getProducts {
           price
           plink
         }
+        default_price
       }
+      unit_amount
+      currency
     }
   }
 }
