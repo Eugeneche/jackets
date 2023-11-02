@@ -42,6 +42,10 @@ query useTranslations {
         name
         phone
         prod_description
+        prod_properties
+        order
+        choose_color
+        choose_size
         send
         seo_description
         seo_title

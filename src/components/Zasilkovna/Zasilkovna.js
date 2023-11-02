@@ -8,8 +8,6 @@ const Zasilkovna = () => {
     useEffect(() => {
         setPacketa(window.Packeta)
     })
-    //const Packeta = window.Packeta
-    console.log(Packeta)
 
     const packetaApiKey = 'a27ac5f8cac4d754'
     const showSelectedPickupPoint = (point) => {
