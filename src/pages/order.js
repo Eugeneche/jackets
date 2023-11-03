@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import getStripe from "../utils/stripejs"
+//import getStripe from "../utils/stripejs"
+import { loadStripe } from "@stripe/stripe-js"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import useTranslations from "../components/useTranslations"
@@ -24,15 +25,16 @@ const OrderPage = ({data}) => {
     })
   })
   /* ------------------------ */
-  const [loading, setLoading] = useState(false)
-
+  //const [loading, setLoading] = useState(false)
+  //console.log(getStripe)
   const handleSubmit = async event => {
     event.preventDefault()
-    setLoading(true)
+    //setLoading(true)
 
     //const price = new FormData(event.target).get("priceSelect")
     const price = currentProduct?.default_price
-    const stripe = await getStripe()
+    const stripe = await loadStripe('pk_test_51O4scKFMr3lmpXgFMWy8l78D41LYkgIW3ArVdJ5jaSkI8K0nnarUXNU81QPoYQ3QXPFvulI8DD3DjutBxxt6PluF00xTf8GqeV')
+    
     const { error } = await stripe.redirectToCheckout({
       mode: "payment",
       lineItems: [{ price, quantity: 1 }],
@@ -42,7 +44,7 @@ const OrderPage = ({data}) => {
 
     if (error) {
       console.warn("Error:", error)
-      setLoading(false)
+      //setLoading(false)
     }
   }
 
