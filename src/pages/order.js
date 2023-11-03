@@ -52,7 +52,7 @@ const OrderPage = ({data}) => {
     <>
       <div className={styles.container}>
         <h1>Order Page</h1>
-        <p>Welcome to Order Page</p>
+
         <div className={styles.chooseProduct}>
 
           <div>
@@ -84,16 +84,14 @@ const OrderPage = ({data}) => {
               </select>
             </label>
 
-            <h4>{currentProduct?.metadata?.price}</h4>
+            <h4>{currentProduct?.metadata?.price} CZK</h4>
+
+            <button className={styles.paymentBtn} onClick={(event) => handleSubmit(event)}>First way</button>
 
             <a href={currentProduct?.metadata?.plink} target="_blank" rel="noreferrer">
-              <button>Continue</button>
+              <button className={styles.paymentBtn}>Fast link</button>
             </a>
 
-
-            <button onClick={(event) => handleSubmit(event)}>Another way</button>
-
-            
           </div>
         </div>
       </div>

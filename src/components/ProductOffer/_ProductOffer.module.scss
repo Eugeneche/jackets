@@ -1,6 +1,7 @@
 .section {
     background: #bdbdbd;
     padding: 30px;
+    margin: 20px 0;
 }
 
 .container {
@@ -11,8 +12,9 @@
 
 .products {
     display: grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 4%;
+    margin: 20px 0;
 }
 
 .product-description {

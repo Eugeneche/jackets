@@ -46,6 +46,7 @@ query useTranslations {
         order
         choose_color
         choose_size
+        choose_point
         send
         seo_description
         seo_title

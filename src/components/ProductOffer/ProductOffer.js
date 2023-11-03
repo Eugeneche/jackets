@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import useTranslations from "../useTranslations"
 import * as styles from "./_ProductOffer.module.scss"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import LocalizedLink from "../localizedLink"
 
 const ProductOffer = () => {

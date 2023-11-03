@@ -69,6 +69,13 @@ h3 {
   color: #383838;
 }
 
+h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #383838;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 html, body {
@@ -95,6 +102,12 @@ main {
   flex-grow: 1;
   /* background: #fbfbfb; */
   padding-top: 57px;  /* for case when main menu has position fixed */
+}
+
+@media screen and (max-width: 430px) {
+  main {
+    padding-top: 80px;  /* for case when main menu has position fixed */
+  }
 }
 
 

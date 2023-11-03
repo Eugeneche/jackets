@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react"
+import useTranslations from "../useTranslations"
 import * as styles from "./_Zasilkovna.module.scss"
 
 const Zasilkovna = () => {
+
+    const { 
+        choose_point
+     } = useTranslations()
 
     const [ Packeta, setPacketa ] = useState('')
 
@@ -25,15 +30,15 @@ const Zasilkovna = () => {
     }
 
     return (
-        <>
+        <section className={styles.section}>
             <h2>Zasilkovna</h2>
              <div>
 
 
-            <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>Select pick-up point</button>    
+            <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point}</button>    
             <div className="packeta-selector-value"></div>
             </div>
-        </>
+        </section>
     )
 
 }
