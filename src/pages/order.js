@@ -33,8 +33,8 @@ const OrderPage = ({data}) => {
 
     //const price = new FormData(event.target).get("priceSelect")
     const price = currentProduct?.default_price
-    const stripe = await loadStripe(process.env.STRIPE_PUBLISHABLE_KEY)
-    
+    const stripe = await loadStripe(`${process.env.STRIPE_PUBLISHABLE_KEY}`)
+    console.log(process.env.STRIPE_PUBLISHABLE_KEY)
     const { error } = await stripe.redirectToCheckout({
       mode: "payment",
       lineItems: [{ price, quantity: 1 }],
