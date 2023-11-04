@@ -86,11 +86,20 @@ const OrderPage = ({data}) => {
 
             <h4>{currentProduct?.metadata?.price} CZK</h4>
 
-            <button className={styles.paymentBtn} onClick={(event) => handleSubmit(event)}>First way</button>
+            <button className={styles.paymentBtn} onClick={(event) => handleSubmit(event)}>Pay</button>
 
-            <a href={currentProduct?.metadata?.plink} target="_blank" rel="noreferrer">
+            <p>To make the test payment use the following card number:</p>
+            <p>4242 4242 4242 4242</p>
+
+            <p>Card expiration date:</p>
+            <p>any future date</p>
+
+            <p>CVV:</p>
+            <p>any 3 numbers</p>
+
+{/*             <a href={currentProduct?.metadata?.plink} target="_blank" rel="noreferrer">
               <button className={styles.paymentBtn}>Fast link</button>
-            </a>
+            </a> */}
 
           </div>
         </div>

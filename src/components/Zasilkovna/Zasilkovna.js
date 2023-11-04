@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import useTranslations from "../useTranslations"
 import * as styles from "./_Zasilkovna.module.scss"
+import Form from "../Form/Form"
 
 const Zasilkovna = () => {
 
@@ -9,38 +10,53 @@ const Zasilkovna = () => {
      } = useTranslations()
 
     const [ Packeta, setPacketa ] = useState('')
+    const [ point, setPoint ] = useState('')
+    const [ isComplited, setIsComplited ] = useState(false)
 
     useEffect(() => {
         setPacketa(window.Packeta)
+        setIsComplited(false)
     })
 
     const packetaApiKey = 'a27ac5f8cac4d754'
+
     const showSelectedPickupPoint = (point) => {
         const saveElement = document.querySelector(".packeta-selector-value");
         saveElement.innerText = '';
         if (point) {
           console.log("Selected point", point);
-          saveElement.innerText = "Address: " + point.formatedValue; 
+          saveElement.innerText = "Address: " + `Point #${point.id}, ${point.city}, ${point.street}, PSČ: ${point.zip}, ${point.url}`; 
+          setPoint(point)
         }
     }
+
     const packetaOptions = {
         country: "cz", 
         valueFormat: "\'Packeta\',id,carrierId,carrierPickupPointId,name,city,street", 
         defaultCurrency: "CZK"
     }
 
+    useEffect(() => {
+        const saveElement = document.querySelector(".packeta-selector-value")
+        saveElement.innerText = ''
+        setPoint('')
+    }, [isComplited])
+
     return (
         <section className={styles.section}>
-            <h2>Zasilkovna</h2>
-             <div>
+            <div className={styles.container}>
+                <h2>Zasilkovna</h2>
+            
+                <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point}</button>    
+                <div style={{margin: "20px 0"}} className="packeta-selector-value"></div>
 
+                <div style={point ? {display: "block"} : {display: "none"}}>
+                    <Form point={point} setIsComplited={setIsComplited} />
+                </div>
 
-            <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point}</button>    
-            <div className="packeta-selector-value"></div>
             </div>
         </section>
     )
-
 }
 
 export default Zasilkovna
