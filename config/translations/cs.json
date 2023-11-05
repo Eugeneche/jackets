@@ -1,5 +1,6 @@
 {
-  "headerHero": "Kvalitní dámské bundy",
+  "main_h1": "Plyšová bunda z umělého semiše",
+  "main_h2": "Elegantní a útulné: Styl a teplo v jednom!",
   
   "home": "domů",
   "about_product": "popis",
@@ -10,12 +11,14 @@
 
   "prod_description": "Tato dámská kožichová bunda z ovčí kůže vyzařuje nadčasovou eleganci a teplo. Vyrobena z vysokokvalitní pravé ovčí kůže, má hebkou podšívku z oveččí vlny a elegantní kožený povrch. Střižená silueta a asymetrický zip přidávají moderní nádech. Ať už procházíte městem nebo míříte na venkovský výlet, tato bunda je dokonalou kombinací stylu a pohodlí.",
   "prod_properties": "Dostupná ve třech velikostech: S, M a L a dvou klasických barvách: černá a hnědá.",
-  "order": "objednat",
+  "order_online_payment": "Objednat online platbou",
+  "order_on_delivery": "Platba na dobírku",
 
   "choose_color": "Vyberte barvu",
   "choose_size": "Vyberte velikost",
 
-  "choose_point": "Vybrat výdejní místo",
+  "choose_point_h2": "Vyberte si nejvhodnější místo vyzvednutí v rámci služby Zásilkovna",
+  "choose_point_btn": "Vybrat výdejní místo",
 
   "your_name": "vaše jméno",
   "your_message": "zde napište svou zprávu",

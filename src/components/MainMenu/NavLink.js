@@ -2,12 +2,12 @@ import React from "react"
 import LocalizedLink from "../localizedLink"
 
 const linkStyles = {
-    color: "#0007f3",
+    color: "#1a1a1a",
     textDecoration: "none"
 }
 
 const activeStyles = {
-    color: "#a09efd",
+    color: "#787878",
     textDecoration: "underline"
 }
 

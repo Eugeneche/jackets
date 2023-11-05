@@ -8,15 +8,17 @@ import LocalizedLink from "../localizedLink"
 const ProductOffer = () => {
 
     const { 
+        main_h2,
         prod_description,
         prod_properties,
-        order
+        order_online_payment,
+        order_on_delivery
      } = useTranslations()
 
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <h2>Product Offer</h2>
+                <h2>{main_h2}</h2>
                 <div className={styles.products}>
                     <StaticImage src="../../images/brown.jpg" alt="brown jacket" />
                     <StaticImage src="../../images/black.jpg" alt="black jacket" />
@@ -28,7 +30,10 @@ const ProductOffer = () => {
                     {prod_properties}
                 </p>
                 <LocalizedLink to="/order">
-                    <button className={styles.orderBtn}>{order}</button>
+                    <button className={styles.orderBtn}>{order_online_payment}</button>
+                </LocalizedLink>
+                <LocalizedLink to="/delivery">
+                    <button className={styles.orderBtn}>{order_on_delivery}</button>
                 </LocalizedLink>
                 
             </div>

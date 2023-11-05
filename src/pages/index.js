@@ -1,6 +1,7 @@
 import * as React from "react"
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
+import useTranslations from "../components/useTranslations"
 import Seo from "../components/seo"
 //import Zasilkovna from "../components/Zasilkovna/Zasilkovna"
 import Header from "../components/Header/Header"
@@ -10,12 +11,16 @@ import * as styles from "./pages.module.scss"
 
 
 const IndexPage = () => {
+
+  const {
+    main_h1
+  } = useTranslations()
   
   return (
     <>   
       <Header />
       <div className={styles.container}>
-        <h1>Welcome</h1>
+        <h1>{main_h1}</h1>
       </div>
 
         <ProductOffer />

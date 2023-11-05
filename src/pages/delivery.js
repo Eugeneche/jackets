@@ -2,6 +2,7 @@ import * as React from "react"
 //import { Link } from "gatsby"
 //import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
+import useTranslations from "../components/useTranslations"
 import Zasilkovna from "../components/Zasilkovna/Zasilkovna"
 import * as styles from "./pages.module.scss"
 

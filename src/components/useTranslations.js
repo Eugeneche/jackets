@@ -35,7 +35,8 @@ query useTranslations {
         email
         four_o_four_text
         four_o_four_title
-        headerHero
+        main_h1
+        main_h2
         home
         id
         message
@@ -43,10 +44,12 @@ query useTranslations {
         phone
         prod_description
         prod_properties
-        order
+        order_online_payment
+        order_on_delivery
         choose_color
         choose_size
-        choose_point
+        choose_point_h2
+        choose_point_btn
         send
         seo_description
         seo_title

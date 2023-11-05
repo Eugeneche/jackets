@@ -1,5 +1,6 @@
 {
-  "headerHero": "Quality women's jackets",
+  "main_h1": "Plush Faux Suede Jacket",
+  "main_h2": "Chic and Cozy: Style and Warmth in One!",
   
   "home": "home",
   "about_product": "description",
@@ -10,12 +11,14 @@
 
   "prod_description": "This women's sheepskin jacket exudes timeless elegance and warmth. Crafted from high-quality genuine sheepskin, it features a plush shearling lining and a sleek leather exterior. The tailored silhouette and asymmetrical zipper add a touch of modern flair. Whether you're strolling through the city or heading to a countryside getaway, this jacket is the perfect blend of style and comfort.",
   "prod_properties": "Available in three sizes: S, M, and L and two classic colors: black and brown.",
-  "order": "place an order",
+  "order_online_payment": "Checkout with online payment",
+  "order_on_delivery": "Pay on delivery",
   
   "choose_color": "Select the color",
   "choose_size": "Select the size",
 
-  "choose_point": "Choose a pick-up point",
+  "choose_point_h2": "Choose the most convenient pick-up point in the Zásilkovna service",
+  "choose_point_btn": "Choose a pick-up point",
 
   "your_name": "your name",
   "your_message": "your message",

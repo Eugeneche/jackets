@@ -6,7 +6,9 @@ import Form from "../Form/Form"
 const Zasilkovna = () => {
 
     const { 
-        choose_point
+        choose_point_h2,
+        choose_point_btn
+        
      } = useTranslations()
 
     const [ Packeta, setPacketa ] = useState('')
@@ -45,9 +47,9 @@ const Zasilkovna = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <h2>Zasilkovna</h2>
+                <h2>{choose_point_h2}</h2>
             
-                <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point}</button>    
+                <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point_btn}</button>    
                 <div style={{margin: "20px 0"}} className="packeta-selector-value"></div>
 
                 <div style={point ? {display: "block"} : {display: "none"}}>
