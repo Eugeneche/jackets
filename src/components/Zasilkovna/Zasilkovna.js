@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import useTranslations from "../useTranslations"
 import * as styles from "./_Zasilkovna.module.scss"
 import Form from "../Form/Form"
+import packeta_logo from "../../images/packeta_logo.png"
 
 const Zasilkovna = () => {
 
@@ -47,9 +48,15 @@ const Zasilkovna = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <h2>{choose_point_h2}</h2>
+                <h3>{choose_point_h2}</h3>
+
+                <img  className={styles.deliveryLogo} src={packeta_logo} alt="packeta logo"></img>
             
-                <button className="packeta-selector-open" onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point_btn}</button>    
+                <button 
+                    className="packeta-selector-open" 
+                    style={{display: "block", margin: "20px auto", fontFamily: "'Lato', sans-serif", textTransform: "uppercase"}}
+                    onClick={() => {Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions)}}>{choose_point_btn}
+                </button>    
                 <div style={{margin: "20px 0"}} className="packeta-selector-value"></div>
 
                 <div style={point ? {display: "block"} : {display: "none"}}>

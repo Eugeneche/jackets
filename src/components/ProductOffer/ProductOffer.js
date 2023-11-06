@@ -29,12 +29,15 @@ const ProductOffer = () => {
                 <p className={styles.productDescription}>
                     {prod_properties}
                 </p>
-                <LocalizedLink to="/order">
-                    <button className={styles.orderBtn}>{order_online_payment}</button>
-                </LocalizedLink>
-                <LocalizedLink to="/delivery">
-                    <button className={styles.orderBtn}>{order_on_delivery}</button>
-                </LocalizedLink>
+                <div className={styles.buttons}>
+                    <LocalizedLink to="/order">
+                        <button className={styles.orderBtn}>{order_online_payment}</button>
+                    </LocalizedLink>
+                    <LocalizedLink to="/delivery">
+                        <button className={styles.orderBtn}>{order_on_delivery}</button>
+                    </LocalizedLink>
+                </div>
+
                 
             </div>
         </section>

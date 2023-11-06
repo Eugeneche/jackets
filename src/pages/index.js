@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Header from "../components/Header/Header"
 import ProductOffer from "../components/ProductOffer/ProductOffer"
 import * as styles from "./pages.module.scss"
+import Gallery from "../components/Gallery/Gallery"
 
 
 
@@ -24,9 +25,7 @@ const IndexPage = () => {
       </div>
 
         <ProductOffer />
-{/*         <section>
-          <Zasilkovna />
-        </section> */}
+        <Gallery />
     </>
   )
 }
