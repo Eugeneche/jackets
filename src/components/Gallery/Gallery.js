@@ -1,9 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import useTranslations from "../useTranslations"
 import * as styles from "./_Gallery.module.scss"
 
 const Gallery = () => {
+
+    const { 
+        gallery
+        } = useTranslations()
 
     const data = useStaticQuery(graphql`
         query getGallery {
@@ -25,7 +30,7 @@ const Gallery = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <h2>Gallery</h2>
+                <h2>{gallery}</h2>
                 <div className={styles.galleryWrapper}>
                     {images.map(img => {
                         return (

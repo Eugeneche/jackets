@@ -38,6 +38,7 @@ query useTranslations {
         main_h1
         main_h2
         home
+        gallery
         id
         message
         name
@@ -48,8 +49,10 @@ query useTranslations {
         order_on_delivery
         choose_color
         choose_size
+        delivery_title
         choose_point_h2
         choose_point_btn
+        change_point_btn
         send
         seo_description
         seo_title

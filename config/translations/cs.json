@@ -14,11 +14,15 @@
   "order_online_payment": "Objednat online platbou",
   "order_on_delivery": "Platba na dobírku",
 
+  "gallery": "Galerie",
+
   "choose_color": "Vyberte barvu",
   "choose_size": "Vyberte velikost",
 
+  "delivery_title": "Doručení",
   "choose_point_h2": "Vyberte si nejvhodnější místo vyzvednutí v rámci služby Zásilkovna",
   "choose_point_btn": "Vybrat výdejní místo",
+  "change_point_btn": "Změnit místo vyzvednutí",
 
   "your_name": "vaše jméno",
   "your_message": "zde napište svou zprávu",

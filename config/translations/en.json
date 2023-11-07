@@ -13,12 +13,16 @@
   "prod_properties": "Available in three sizes: S, M, and L and two classic colors: black and brown.",
   "order_online_payment": "Checkout with online payment",
   "order_on_delivery": "Pay on delivery",
+
+  "gallery": "Gallery",
   
   "choose_color": "Select the color",
   "choose_size": "Select the size",
 
+  "delivery_title": "Delivery",
   "choose_point_h2": "Choose the most convenient pick-up point in the Zásilkovna service",
   "choose_point_btn": "Choose a pick-up point",
+  "change_point_btn": "Change a pick-up point",
 
   "your_name": "your name",
   "your_message": "your message",

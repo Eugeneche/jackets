@@ -9,7 +9,7 @@ nav {
 
     /* max-width: $headerContainer; */
     width: 100%;
-    height: fit-content;
+    height: 50px;
 /*     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -26,7 +26,7 @@ nav {
 
     .pages {
         text-transform: uppercase; 
-        margin: 13px 0;    
+        margin: 17px 0;    
 
         a {
             text-decoration: none;
@@ -39,14 +39,18 @@ nav {
 
 .flags {
 
+    a {
+        color: black;
+    }
+
     .flag {
-        height: 25px;
-        margin: 13px 0 13px 10px ;
+        /* height: 25px; */
+        margin: 16px 6px -4px 3px;
     }
 }
 
 
-@media screen and (max-width: 430px) {
+/* @media screen and (max-width: 430px) {
 
     .main-menu {
     
@@ -70,4 +74,4 @@ nav {
             margin: 0 5px;
         }
     }
-}
+} */

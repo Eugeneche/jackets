@@ -4,8 +4,8 @@ import * as style from "./_MainMenu.module.scss"
 import { LocaleContext } from "../layout"
 
 
-import eng from "../../images/eng.svg"
-import cze from "../../images/cze.svg"
+import eng from "../../images/en.png"
+import cze from "../../images/cs.png"
 //import LocalizedLink from "../localizedLink"
 //import useTranslations from "../useTranslations"
 
@@ -28,10 +28,10 @@ const LanguagesSwitcher = () => {
   return (
     <div className={style.flags}>
       <Link to={`${path}`} hrefLang="cs">
-        <img className={style.flag} src={cze} alt="czech flag"></img>
+        <span>CZ</span><img className={style.flag} src={cze} alt="czech flag"></img>
       </Link>
       <Link to={`/en${path}`} hrefLang="en">
-        <img className={style.flag} src={eng} alt="great britain flag"></img>
+        <span>EN</span><img className={style.flag} src={eng} alt="great britain flag"></img>
       </Link>
 {/*       <Link to={`/uk${path}`} hrefLang="uk">
         <img className={style.flag} src={ukr} alt="ukrainian flag"></img>

@@ -9,11 +9,15 @@ import * as styles from "./pages.module.scss"
 
 
 const DeliveryPage = () => {
+
+  const { 
+    delivery_title   
+  } = useTranslations()
   
   return (
     <>   
       <div className={styles.container}>
-        <h1>Delivery</h1>
+        <h1>{delivery_title}</h1>
         <Zasilkovna />
       </div>
     </>
