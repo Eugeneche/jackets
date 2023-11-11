@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-//import { GatsbyImage, getImage } from "gatsby-plugin-image"
-//import i from "../../images/gallery/1.jpg"
 import * as styles from "./_Magnifier.module.scss"
 
 const Magnifier = ({ image }) => {
@@ -28,7 +26,7 @@ const Magnifier = ({ image }) => {
             position: "relative",
           }}
         
-        className={styles.imgMagnifierContainer}
+          className={styles.imgMagnifierContainer}
           onMouseEnter={() => setShowMagnifier(true)}
           onMouseLeave={() => setShowMagnifier(false)}
           onMouseMove={onMouseHover}
@@ -37,7 +35,8 @@ const Magnifier = ({ image }) => {
           <img className={styles.mainImage} src={image}></img>
 
           {showMagnifier && 
-            <div
+            <div 
+              className={styles.magnifier}
               style={{
                 position: "absolute",
                 left: `${cursorPosition.x - 100}px`,
@@ -47,7 +46,7 @@ const Magnifier = ({ image }) => {
               }}
             >
             <div 
-              className={styles.magnifier}
+              className={styles.magnifierImage}
               style={{
                 backgroundImage: `url(${image})`,
                 backgroundPosition: `${position.x}% ${position.y}%`,
